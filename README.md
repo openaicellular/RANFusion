@@ -1,4 +1,4 @@
-# Wellcom to RAN Fusion
+# Welcome to RAN Fusion
 
 ## Overview
 
