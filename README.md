@@ -20,9 +20,10 @@ Welcome to the RAN Fusion Simulator! This simple tool is designed to simulate th
 1. **Clone the Repository**
 2. **Navigate to the Directory**
 3. **Install Dependencies**
-
-pip install -r requirements.txt
-4. install InfluxDB and get the API key from InfluxDB GUI 
+4. pip install -r requirements.txt
+5. install InfluxDB and get the API key from InfluxDB GUI
+6. run setup.py
+7. run main.py
 
 
    
