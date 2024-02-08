@@ -1,0 +1,64 @@
+.body-background {
+    background-color: #f4f4f4; /* Light gray background for overall body */
+    font-family: 'Arial', sans-serif; /* Consistent font throughout the page */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Centered with margin */
+    overflow-y: auto; /* Scrollable container for forms */
+    padding-bottom: 20px; /* Padding at the bottom */
+}
+
+.form-container {
+    background-color: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px; /* Slightly larger border radius for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for a 3D effect */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.form-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px; /* More space above the forms */
+}
+
+h3 {
+    color: #0056b3; /* Color for sub-headings */
+    margin-bottom: 15px; /* Space below sub-headings */
+}
+
+form {
+    margin-bottom: 50px; /* Increased bottom margin for forms */
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px; /* More padding for input fields */
+    margin: 8px 0;
+    border-radius: 5px; /* Slightly rounded borders for input fields */
+    border: 1px solid #ccc; /* Lighter border color */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #007bff; /* Brighter shade for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth transition for button hover */
+}
+
+button:hover {
+    background-color: #0069d9; /* Darker shade on hover */
+}

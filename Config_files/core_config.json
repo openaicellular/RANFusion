@@ -1,0 +1,128 @@
+{
+  "hlr": {
+    "id": "hlr1",
+    "database": {
+      "subscribers": [
+        {
+          "imsi": "12345678912345",
+          "services": [
+            "voice",
+            "sms",
+            "data"
+          ],
+          "authentication": {
+            "key": "AABBCCDDEEFF0011223344",
+            "algorithm": "A3A8"
+          }
+        }
+      ]
+    },
+    "interfaces": {
+      "map": {
+        "version": 2
+      },
+      "diameter": {
+        "hss_address": "1.1.1.1"
+      },
+      "ldap": {}
+    }
+  },
+  "msc": {
+    "id": "msc1",
+    "vm_capacity": 10000,
+    "interfaces": {
+      "map": {
+        "version": 2
+      },
+      "isup": {}
+    },
+    "controllers": [
+      {
+        "id": "ctr1",
+        "channels": 100
+      }
+    ]
+  },
+  "sgsn": {
+    "id": "sgsn1",
+    "gtpc": {
+      "addresses": [
+        "1.1.1.2",
+        "1.1.1.3"
+      ]
+    },
+    "capacity": 500000,
+    "interfaces": {
+      "gtpv1": {},
+      "radius": {},
+      "map": {
+        "version": 2
+      }
+    }
+  },
+  "ggsn": {
+    "id": "ggsn1",
+    "apn_config": [
+      {
+        "apn": "internet",
+        "pdp_type": "ipv4",
+        "pdp_address": "2.2.2.2"
+      }
+    ],
+    "ipv4_pool": {
+      "start": "192.168.1.1",
+      "end": "192.168.1.254"
+    },
+    "ipv6_pool": {
+      "start": "2001:db8::1",
+      "end": "2001:db8::ffff"
+    }
+  },
+  "dns": {
+    "servers": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "records": [
+      {
+        "name": "google.com",
+        "type": "A",
+        "address": "142.250.190.78"
+      }
+    ]
+  },
+  "aaa": {
+    "servers": [
+      {
+        "id": "aaa1",
+        "address": "1.1.1.5",
+        "protocols": [
+          "radius",
+          "diameter"
+        ]
+      }
+    ],
+    "users": [
+      {
+        "username": "user1",
+        "password": "pass123"
+      }
+    ]
+  },
+  "pcrf": {
+    "id": "pcrf1",
+    "policy_rules": [
+      {
+        "rule_id": 1,
+        "flow": "permit out udp/80",
+        "charging": {
+          "type": "offline"
+        }
+      }
+    ],
+    "gx_intf": {
+      "protocol": "diameter",
+      "server": "1.1.1.6"
+    }
+  }
+}

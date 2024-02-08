@@ -1,0 +1,95 @@
+python control_app.py
+
+Using the Endpoints
+Once the server is running, you can interact with it by sending HTTP POST requests to the following endpoints:
+
+Update Voice Traffic
+To update voice traffic parameters:
+curl -X POST http://localhost:5000/update_voice_traffic \
+-H "Content-Type: application/json" \
+-d '{
+  "bitrate_range": [min_bitrate, max_bitrate],
+  "jitter": jitter_value,
+  "delay": delay_value,
+  "packet_loss_rate": packet_loss_rate_value
+}'
+
+Update Video Traffic
+To update video traffic parameters:
+curl -X POST http://localhost:5000/update_video_traffic \
+-H "Content-Type: application/json" \
+-d '{
+  "num_streams_range": [min_streams, max_streams],
+  "stream_bitrate_range": [min_bitrate, max_bitrate],
+  "jitter": jitter_value,
+  "delay": delay_value,
+  "packet_loss_rate": packet_loss_rate_value
+}'
+
+Update Gaming Traffic
+To update gaming traffic parameters:
+curl -X POST http://localhost:5000/update_gaming_traffic \
+-H "Content-Type: application/json" \
+-d '{
+  "bitrate_range": [min_bitrate, max_bitrate],
+  "jitter": jitter_value,
+  "delay": delay_value,
+  "packet_loss_rate": packet_loss_rate_value
+}'
+Update IoT Traffic
+To update IoT traffic parameters:
+curl -X POST http://localhost:5000/update_iot_traffic \
+-H "Content-Type: application/json" \
+-d '{
+  "packet_size_range": [min_size, max_size],
+  "interval_range": [min_interval, max_interval],
+  "jitter": jitter_value,
+  "delay": delay_value,
+  "packet_loss_rate": packet_loss_rate_value
+}'
+Update Data Traffic
+To update data traffic parameters:
+curl -X POST http://localhost:5000/update_data_traffic \
+-H "Content-Type: application/json" \
+-d '{
+  "bitrate_range": [min_bitrate, max_bitrate],
+  "interval_range": [min_interval, max_interval],
+  "jitter": jitter_value,
+  "delay": delay_value,
+  "packet_loss_rate": packet_loss_rate_value
+}'
+
+Parameters Explanation
+bitrate_range: An array with two elements specifying the minimum and maximum bitrate.
+num_streams_range: An array with two elements specifying the minimum and maximum number of streams.
+stream_bitrate_range: An array with two elements specifying the minimum and maximum bitrate for streams.
+packet_size_range: An array with two elements specifying the minimum and maximum packet size.
+interval_range: An array with two elements specifying the minimum and maximum interval between packets.
+jitter: A value specifying the jitter in milliseconds.
+delay: A value specifying the delay in milliseconds.
+packet_loss_rate: A value specifying the packet loss rate as a percentage.
+Replace min_bitrate, max_bitrate, min_streams, max_streams, min_size, max_size, min_interval, max_interval, jitter_value, delay_value, and packet_loss_rate_value with the actual values you wish to set.
+
+Using the Dashboard
+If you prefer a graphical interface, you can use the Dash app provided in the dashboard directory. Make sure to run the Dash app, and it should provide a user-friendly way to interact with these endpoints without manually sending curl requests.
+
+# Navigate to the dashboard directory and run the Dash app
+cd dashboard
+python app.py
+
+Open your web browser and navigate to the address where the Dash app is running (usually http://localhost:8050) to use the graphical interface.
+
+curl -X POST http://localhost:5000/update_voice_traffic \
+-H "Content-Type: application/json" \
+-d '{
+  "bitrate_range": [100, 500],
+  "jitter": 10,
+  "delay": 50,
+  "packet_loss_rate": 0.01
+}'
+In this example, bitrate_range is set to a list with a minimum bitrate of 100 and a maximum bitrate of 500. The jitter is set to 10, delay is set to 50, and packet_loss_rate is set to 0.01 (which is 1% packet loss). Adjust these values as needed to match the scenario you want to test.
+
+
+
+
+

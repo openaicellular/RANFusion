@@ -1,0 +1,76 @@
+/* style.css */
+
+/* Overall background style */
+.body-background {
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* A gradient that represents a sunset or sunrise */
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensures it's behind all other content */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the login modal */
+.login-modal-body {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Centralizing and styling the login modal */
+#login-modal .modal-dialog {
+    margin-top: 10vh; /* Position modal slightly from the top */
+    max-width: 400px; /* Control the width of the modal */
+}
+#login-modal .modal-content {
+    border: none; /* Remove border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+}
+
+#login-modal .modal-body {
+    padding: 2rem; /* Spacing inside the modal */
+}
+
+/* Style adjustments for input fields */
+#username-input, #password-input {
+    border-radius: 20px;
+    border: 1px solid #dee2e6; /* Lighter border color */
+    padding: 10px;
+    margin-bottom: 15px; /* Space between fields */
+    width: 100%; /* Full width */
+}
+/* Login button styling */
+#login-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+#login-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Updated background image path for the main background */
+.body-background {
+    background: url('/assets/telecom-tower-image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+}

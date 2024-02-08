@@ -1,0 +1,53 @@
+{
+  "ue": "UE",
+  "ues": [
+    {
+      "ue_id": "",
+        "gnodeb_id": "",
+        "IMEI": "",
+        "location": {
+          "latitude": 42.2745,
+          "longitude": -71.8064
+        },
+        "connectedCellID": "",
+        "isMobile": "",
+        "initialSignalStrength": 0.75,
+        "rat": "NR",
+        "maxBandwidth": 100,
+        "duplexMode": "TDD",
+        "txPower": 23,
+        "modulation": [
+          "QPSK",
+          "16QAM",
+          "64QAM"
+        ],
+        "coding": "LDPC",
+        "mimo": "2x2",
+        "processing": "Category 4",
+        "bandwidthParts": [
+          50,
+          20,
+          10
+        ],
+        "channelModel": "TDL-C",
+        "velocity": 30,
+        "direction": 135,
+        "trafficModel": "Full Buffer",
+        "schedulingRequests": true,
+        "rlcMode": "AM",
+        "snrThresholds": [
+          18,
+          20,
+          22
+        ],
+        "hoMargin": 6,
+        "n310": 1,
+        "n311": 5,
+        "model": "ModelX",
+        "screensize": "6.5 inches",
+        "batterylevel": 80,
+        "service_type": "",
+        "datasize": ""
+      }
+    ]
+  }

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G RAN Simulator Control Panel</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/resize.js"></script>
+    <script src="assets/formValidation.js" defer></script>
+
+
+</head>
+<body class="body-background">
+    <div class="container">
+        <h1>5G RAN Simulator Control Panel</h1>
+        <div class="form-container" id="formContainer">
+
+        <!-- Voice Traffic Form -->
+        <form id="1">
+            <h3>Voice Traffic</h3>
+            <!-- Input fields with name attributes for voice traffic -->
+            <label for="voice_min_bitrate">Min Bitrate (8-16 kbps):</label>
+            <input type="number" id="voice_min_bitrate" name="voice_min_bitrate" placeholder="8-16 kbps, e.g., 9" required min="8" max="16"><br>
+
+            <label for="voice_max_bitrate">Max Bitrate (8-16 kbps):</label>
+            <input type="number" id="voice_max_bitrate" name="voice_max_bitrate" placeholder="8-16 kbps, e.g., 12" required min="8" max="16"><br>
+
+            <label for="voice_jitter">Jitter (ms):</label>
+            <input type="number" id="voice_jitter" name="voice_jitter" value="0" required><br>
+
+            <label for="voice_delay">Delay (ms):</label>
+            <input type="number" id="voice_delay" name="voice_delay" value="0" required><br>
+
+            <label for="voice_packet_loss_rate">Packet Loss Rate (%):</label>
+            <input type="number" step="0.01" id="voice_packet_loss_rate" name="voice_packet_loss_rate" value="0" required><br>
+
+            <button type="submit">Update Voice Traffic</button>
+        </form>
+
+        <!-- Video Traffic Form -->
+        <form id="2">
+            <h3>Video Traffic</h3>
+            <!-- Input fields with name attributes for video traffic -->
+            <label for="video_min_streams">Min Number of Streams (1-5):</label>
+            <input type="number" id="video_min_streams" name="video_min_streams" placeholder="1-5, e.g., 2" required min="1" max="5"><br>
+
+            <label for="video_max_streams">Max Number of Streams (1-5):</label>
+            <input type="number" id="video_max_streams" name="video_max_streams" placeholder="1-5, e.g., 4" required min="1" max="5"><br>
+
+            <label for="video_min_bitrate">Min Stream Bitrate (3-8 Mbps):</label>
+            <input type="number" id="video_min_bitrate" name="video_min_bitrate" placeholder="3-8 Mbps, e.g., 4" required min="3" max="8"><br>
+
+            <label for="video_max_bitrate">Max Stream Bitrate (3-8 Mbps):</label>
+            <input type="number" id="video_max_bitrate" name="video_max_bitrate" placeholder="3-8 Mbps, e.g., 6" required min="3" max="8"><br>
+
+            <label for="video_jitter">Jitter (ms):</label>
+            <input type="number" id="video_jitter" name="video_jitter" value="0" required><br>
+
+            <label for="video_delay">Delay (ms):</label>
+            <input type="number" id="video_delay" name="video_delay" value="0" required><br>
+
+            <label for="video_packet_loss_rate">Packet Loss Rate (%):</label>
+            <input type="number" step="0.01" id="video_packet_loss_rate" name="video_packet_loss_rate" value="0" required><br>
+
+            <button type="submit">Update Video Traffic</button>
+        </form>
+
+        <!-- Gaming Traffic Form -->
+            <form id="3">
+            <h3>Gaming Traffic</h3>
+
+            <!-- Min Bitrate with placeholder and title for range information -->
+            <label for="gaming_min_bitrate">Min Bitrate (30-70 Mbps):</label>
+            <input type="number" id="gaming_min_bitrate" name="gaming_min_bitrate" placeholder="30-70 Mbps, e.g., 35" required title="Range: 30-70 Mbps, just enter the number like 35" min="30" max="70"><br>
+
+            <!-- Max Bitrate with placeholder and title for range information -->
+            <label for="gaming_max_bitrate">Max Bitrate (30-70 Mbps):</label>
+            <input type="number" id="gaming_max_bitrate" name="gaming_max_bitrate" placeholder="30-70 Mbps, e.g., 65" required title="Range: 30-70 Mbps, just enter the number like 65" min="30" max="70"><br>
+
+            <!-- Jitter, Delay, and Packet Loss Rate with default values and titles for default information -->
+            <label for="gaming_jitter">Jitter (ms):</label>
+            <input type="number" id="gaming_jitter" name="gaming_jitter" value="0" required title="Default: 0 ms"><br>
+
+            <label for="gaming_delay">Delay (ms):</label>
+            <input type="number" id="gaming_delay" name="gaming_delay" value="0" required title="Default: 0 ms"><br>
+
+            <label for="gaming_packet_loss_rate">Packet Loss Rate (%):</label>
+            <input type="number" step="0.01" id="gaming_packet_loss_rate" name="gaming_packet_loss_rate" value="0" required title="Default: 0%"><br>
+
+            <button type="submit">Update Gaming Traffic</button>
+        </form>
+
+        <!-- IoT Traffic Form -->
+        <form id="4">
+            <h3>IoT Traffic</h3>
+            <!-- Input fields with name attributes for IoT traffic -->
+            <label for="iot_min_packet_size">Min Packet Size (5-15 bytes):</label>
+            <input type="number" id="iot_min_packet_size" name="iot_min_packet_size" placeholder="5-15 bytes, e.g., 6" required min="5" max="15"><br>
+
+            <label for="iot_max_packet_size">Max Packet Size (5-15 bytes):</label>
+            <input type="number" id="iot_max_packet_size" name="iot_max_packet_size" placeholder="5-15 bytes, e.g., 14" required min="5" max="15"><br>
+
+            <label for="iot_min_interval">Min Interval (10-60 seconds):</label>
+            <input type="number" id="iot_min_interval" name="iot_min_interval" placeholder="10-60 seconds, e.g., 20" required min="10" max="60"><br>
+
+            <label for="iot_max_interval">Max Interval (10-60 seconds):</label>
+            <input type="number" id="iot_max_interval" name="iot_max_interval" placeholder="10-60 seconds, e.g., 50" required min="10" max="60"><br>
+
+            <label for="iot_jitter">Jitter (ms):</label>
+            <input type="number" id="iot_jitter" name="iot_jitter" value="0" required><br>
+
+            <label for="iot_delay">Delay (ms):</label>
+            <input type="number" id="iot_delay" name="iot_delay" value="0" required><br>
+
+            <label for="iot_packet_loss_rate">Packet Loss Rate (%):</label>
+            <input type="number" step="0.01" id="iot_packet_loss_rate" name="iot_packet_loss_rate" value="0" required><br>
+
+            <button type="submit">Update IoT Traffic</button>
+        </form>
+
+
+        <!-- Data Traffic Form -->
+        <form id="5">
+            <h3>Data Traffic</h3>
+            <!-- Input fields with name attributes for data traffic -->
+            <label for="data_min_bitrate">Min Bitrate (1-10 Mbps):</label>
+            <input type="number" id="data_min_bitrate" name="data_min_bitrate" placeholder="1-10 Mbps, e.g., 2" required min="1" max="10"><br>
+
+            <label for="data_max_bitrate">Max Bitrate (1-10 Mbps):</label>
+            <input type="number" id="data_max_bitrate" name="data_max_bitrate" placeholder="1-10 Mbps, e.g., 8" required min="1" max="10"><br>
+
+            <label for="data_min_interval">Min Interval (0.5-2 seconds):</label>
+            <input type="number" id="data_min_interval" name="data_min_interval" placeholder="0.5-2 seconds, e.g., 1" required min="0.5" max="2"><br>
+
+            <label for="data_max_interval">Max Interval (0.5-2 seconds):</label>
+            <input type="number" id="data_max_interval" name="data_max_interval" placeholder="0.5-2 seconds, e.g., 1.5" required min="0.5" max="2"><br>
+
+            <label for="data_jitter">Jitter (ms):</label>
+            <input type="number" id="data_jitter" name="data_jitter" value="0" required><br>
+
+            <label for="data_delay">Delay (ms):</label>
+            <input type="number" id="data_delay" name="data_delay" value="0" required><br>
+
+            <label for="data_packet_loss_rate">Packet Loss Rate (%):</label>
+            <input type="number" step="0.01" id="data_packet_loss_rate" name="data_packet_loss_rate" value="0" required><br>
+
+            <button type="submit">Update Data Traffic</button>
+        </form>
+
+            <!-- Tabs container -->
+            <div id="tabs-container">
+            <!-- Tabs content -->
+            </div>
+
+            <!-- Divider -->
+            <div id="divider"></div>
+
+
+        <script>
+                $('#1').submit(function(event) {
+                event.preventDefault();
+                var voiceData = {
+                    "bitrate_range": [parseInt($('#voice_min_bitrate').val(), 10), parseInt($('#voice_max_bitrate').val(), 10)],
+                    "jitter": parseFloat($('#voice_jitter').val()),
+                    "delay": parseFloat($('#voice_delay').val()),
+                    "packet_loss_rate": parseFloat($('#voice_packet_loss_rate').val())
+                };
+                sendPostRequest('update_voice_traffic', voiceData);
+            });
+        
+                // Video Traffic Form Handler
+                $('#2').submit(function(event) {
+                    event.preventDefault();
+                    var videoData = {
+                        "num_streams_range": [parseInt($('#video_min_streams').val(), 10), parseInt($('#video_max_streams').val(), 10)],
+                        "stream_bitrate_range": [parseInt($('#video_min_bitrate').val(), 10), parseInt($('#video_max_bitrate').val(), 10)],
+                        "jitter": parseFloat($('#video_jitter').val()),
+                        "delay": parseFloat($('#video_delay').val()),
+                        "packet_loss_rate": parseFloat($('#video_packet_loss_rate').val())
+                };
+                sendPostRequest('update_video_traffic', videoData);
+            });
+        
+                // Gaming Traffic Form Handler
+                $('#3').submit(function(event) {
+                    event.preventDefault();
+                    var gamingData = {
+                        "bitrate_range": [parseInt($('#gaming_min_bitrate').val(), 10), parseInt($('#gaming_max_bitrate').val(), 10)],
+                        "jitter": parseFloat($('#gaming_jitter').val()),
+                        "delay": parseFloat($('#gaming_delay').val()),
+                        "packet_loss_rate": parseFloat($('#gaming_packet_loss_rate').val())
+                };
+                    sendPostRequest('update_gaming_traffic', gamingData);
+                });
+        
+                // IoT Traffic Form Handler
+                $('#4').submit(function(event) {
+                    event.preventDefault();
+                    var iotData = {
+                        "packet_size_range": [parseInt($('#iot_min_packet_size').val(), 10), parseInt($('#iot_max_packet_size').val(), 10)],
+                        "interval_range": [parseInt($('#iot_min_interval').val(), 10), parseInt($('#iot_max_interval').val(), 10)],
+                        "jitter": parseFloat($('#iot_jitter').val()),
+                        "delay": parseFloat($('#iot_delay').val()),
+                        "packet_loss_rate": parseFloat($('#iot_packet_loss_rate').val())
+                };
+                    sendPostRequest('update_iot_traffic', iotData);
+                });
+
+        
+                // Data Traffic Form Handler
+                $('#5').submit(function(event) {
+                    event.preventDefault();
+                    var dataTrafficData = {
+                        "bitrate_range": [parseInt($('#data_min_bitrate').val(), 10), parseInt($('#data_max_bitrate').val(), 10)],
+                        "interval_range": [parseInt($('#data_min_interval').val(), 10), parseInt($('#data_max_interval').val(), 10)],
+                        "jitter": parseFloat($('#data_jitter').val()),
+                        "delay": parseFloat($('#data_delay').val()),
+                        "packet_loss_rate": parseFloat($('#data_packet_loss_rate').val())
+                };
+                    sendPostRequest('update_data_traffic', dataTrafficData);
+                });
+
+                
+                // Function to handle form submission
+                function handleFormSubmit(event, endpoint) {
+                    event.preventDefault();
+                    const form = event.target;
+                    const formId = form.id;
+                    console.log("Form ID:", formId);
+                    var formData = $(event.target).serializeArray();
+                    var data = {};
+                    formData.forEach(function(item) {
+                        data[item.name] = item.value;
+                    });
+
+                    sendPostRequest(endpoint, data);
+                }
+                
+                // Function to send POST request
+                function sendPostRequest(formId, data) {
+                    const endpoint = `http://127.0.0.1:5000/${endpointMap[formId]}`;
+                    
+                    fetch(endpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok: ' + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Success:', data);
+                        alert('Traffic updated successfully');
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error updating traffic: ' + error.message);
+                    });
+                }
+</script>
+    </div>
+</body>
+</html>

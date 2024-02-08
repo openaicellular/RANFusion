@@ -1,0 +1,145 @@
+{
+  "gNodeBs": [
+    {
+      "gNodeBId": "W1140",
+      "cells": [
+        {
+          "cellId": "Ax1242",
+          "sectors": [
+            {
+              "sectorId": "Ax1242-A1"
+            },
+            {
+              "sectorId": "Ax1242-A2"
+            },
+            {
+              "sectorId": "Ax1242-A3"
+            }
+          ]
+        },
+        {
+          "cellId": "BX1453",
+          "sectors": [
+            {
+              "sectorId": "BX1453-B1"
+            },
+            {
+              "sectorId": "BX1453-B2"
+            },
+            {
+              "sectorId": "BX1453-B3"
+            }
+          ]
+        },
+        {
+          "cellId": "CX1352",
+          "sectors": [
+            {
+              "sectorId": "CX1352-C1"
+            },
+            {
+              "sectorId": "CX1352-C2"
+            },
+            {
+              "sectorId": "CX1352-C3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "gNodeBId": "W1320",
+      "cells": [
+        {
+          "cellId": "AX1112",
+          "sectors": [
+            {
+              "sectorId": "AX1112-A1"
+            },
+            {
+              "sectorId": "AX1112-A2"
+            },
+            {
+              "sectorId": "AX1112-A3"
+            }
+          ]
+        },
+        {
+          "cellId": "BX1334",
+          "sectors": [
+            {
+              "sectorId": "BX1334-B1"
+            },
+            {
+              "sectorId": "BX1334-B2"
+            },
+            {
+              "sectorId": "BX1334-B3"
+            }
+          ]
+        },
+        {
+          "cellId": "CX1873",
+          "sectors": [
+            {
+              "sectorId": "CX1873-C1"
+            },
+            {
+              "sectorId": "CX1873-C2"
+            },
+            {
+              "sectorId": "CX1873-C3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "gNodeBId": "W2018",
+      "cells": [
+        {
+          "cellId": "AX9980",
+          "sectors": [
+            {
+              "sectorId": "AX9980-A1"
+            },
+            {
+              "sectorId": "AX9980-A2"
+            },
+            {
+              "sectorId": "AX9980-A3"
+            }
+          ]
+        },
+        {
+          "cellId": "BX1230",
+          "sectors": [
+            {
+              "sectorId": "BX1230-B1"
+            },
+            {
+              "sectorId": "BX1230-B2"
+            },
+            {
+              "sectorId": "BX1230-B3"
+            }
+          ]
+        },
+        {
+          "cellId": "CX5103",
+          "sectors": [
+            {
+              "sectorId": "CX5103-C1"
+            },
+            {
+              "sectorId": "CX5103-C2"
+            },
+            {
+              "sectorId": "CX5103-C3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
