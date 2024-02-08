@@ -8,7 +8,6 @@ Welcome to the RANFusion (RAN) Simulator! This simple tool is designed to simula
 - **Realistic RAN Simulation:** Experience accurate modeling of 5G network elements and protocols.
 - **Customizable Scenarios:** Easily configure different network scenarios, including urban, suburban, and rural environments.
 - **Performance Metrics:** Gain insights with a range of metrics like throughput, latency, and packet loss.
-- **Extensive Documentation:** Comprehensive guides and examples to get you started.
 
 ## Getting Started
 
