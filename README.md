@@ -1,4 +1,4 @@
-# RAN Fusion: Simple RAN Simulator
+# Wellcom to RAN Fusion
 
 ## Overview
 
