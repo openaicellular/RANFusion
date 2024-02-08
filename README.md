@@ -30,11 +30,11 @@ Follow these steps to set up the RANFusion Simulator:
 2. **Navigate to the Directory**
 3. **Install Dependencies**
    pip install -r requirements.txt
-5. RUN the setup.py and wait
-6. Install InfluxDB
-7. Get the API token of the Influxdb via GUI (http://localhost:8086/)
-8. past Token into setup.py
-9. run main.py
+5. **RUN the setup.py and wait**
+6. **Install InfluxDB**
+7. **Get the API token of the Influxdb via GUI (http://localhost:8086/)**
+8. **past Token into setup.py**
+9. **run main.py**
    
    
 
