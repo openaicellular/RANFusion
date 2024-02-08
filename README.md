@@ -8,6 +8,7 @@ Welcome to the RAN Fusion Simulator! This simple tool is designed to simulate th
 - **Realistic RAN Simulation:** Experience accurate modeling of 5G network elements and protocols.
 - **Customizable Scenarios:** Easily configure different network scenarios.
 - **Performance Metrics:** Gain insights with a range of metrics like throughput, latency, and packet loss and ...
+![alt text]((images/Log.png))
 
 ## Getting Started
 
