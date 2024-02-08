@@ -2,6 +2,7 @@
 
 ## Overview
 Welcome to the Next Generation Radio Access Network (RAN) Simulator! This simple tool is designed to simulate the behavior and performance of 5G networks. Our simulator offers a detailed framework to test and analyze various components of 5G technology, including the RAN functionalities and end-to-end communication protocols.
+![Example Image](images/log.png)
 
 ## Features
 - **Realistic RAN Simulation:** Experience accurate modeling of 5G network elements and protocols.
