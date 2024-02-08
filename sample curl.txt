@@ -1,0 +1,90 @@
+Below are five curl commands for each of the service classes with parameters set to higher values to simulate increased load and potentially trigger handover due to congestion
+Ensure that the Flask server is running and listening on the correct port before executing these commands.
+The below commands for power shell:
+##########################################################
+Voice Traffic:
+Invoke-WebRequest -Uri "http://localhost:5000/update_voice_traffic" -Method POST -ContentType "application/json" -Body '{
+  "bitrate_range": [128, 256],
+  "jitter": 30,
+  "delay": 100,
+  "packet_loss_rate": 5
+}'
+##########################################################
+Video Traffic:
+Invoke-WebRequest -Uri "http://localhost:5000/update_video_traffic" -Method POST -ContentType "application/json" -Body '{
+  "num_streams_range": [3, 5],
+  "stream_bitrate_range": [2000, 5000],
+  "jitter": 50,
+  "delay": 150,
+  "packet_loss_rate": 5
+}'
+##########################################################
+Gaming Traffic:
+Invoke-WebRequest -Uri "http://localhost:5000/update_gaming_traffic" -Method POST -ContentType "application/json" -Body '{
+  "bitrate_range": [1000, 2000],
+  "jitter": 20,
+  "delay": 75,
+  "packet_loss_rate": 2
+}'
+###########################################################
+IoT Traffic:
+Invoke-WebRequest -Uri "http://localhost:5000/update_iot_traffic" -Method POST -ContentType "application/json" -Body '{
+  "packet_size_range": [512, 1024],
+  "interval_range": [1, 2],
+  "jitter": 10,
+  "delay": 50,
+  "packet_loss_rate": 1
+}'
+###########################################################
+Data Traffic:
+Invoke-WebRequest -Uri "http://localhost:5000/update_data_traffic" -Method POST -ContentType "application/json" -Body '{
+  "bitrate_range": [5000, 10000],
+  "interval_range": [1, 2],
+  "jitter": 25,
+  "delay": 100,
+  "packet_loss_rate": 3
+}'
+#############################################################
+Invoke-RestMethod -Uri 'http://localhost:5000/add_ue' -Method Post -ContentType 'application/json' -Body '{
+  "ue_id": "ue11",
+  "service_type": "data",
+  "sector_id": "AX1112-A1",
+  "gnodeb_id": "",
+  "IMEI": "",
+  "location": {
+    "latitude": 42.2745,
+    "longitude": -71.8064
+  },
+  "connectedCellID": "",
+  "isMobile": "",
+  "initialSignalStrength": 0.75,
+  "rat": "NR",
+  "maxBandwidth": 200,
+  "duplexMode": "TDD",
+  "txPower": 23,
+  "modulation": [
+    "QPSK"
+  ],
+  "coding": "LDPC",
+  "mimo": "2x2",
+  "processing": "Category 4",
+  "bandwidthParts": [
+    50
+  ],
+  "channelModel": "TDL-C",
+  "velocity": 50,
+  "direction": 135,
+  "trafficModel": "Full Buffer",
+  "schedulingRequests": true,
+  "rlcMode": "AM",
+  "snrThresholds": [
+    18
+  ],
+  "hoMargin": 6,
+  "n310": 1,
+  "n311": 5,
+  "model": "ModelX",
+  "screensize": "6.5 inches",
+  "batterylevel": 20,
+  "datasize": ""
+}'
