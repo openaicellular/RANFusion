@@ -22,7 +22,7 @@ Welcome to the RAN Fusion Simulator! This simple tool is designed to simulate th
 3. **Install Dependencies**
 
 pip install -r requirements.txt
-
+4. install InfluxDB and get the API key from InfluxDB GUI 
 
 
    
