@@ -10,8 +10,9 @@ This is the sample result for running 10 UE and see the logs:
 ## Features
 
 - **Realistic RAN Simulation:** Experience accurate modeling of 5G network elements and protocols.
+- **Support Multiple gNodeB, Cell, Sector, UE**
 - **Customizable Scenarios:** Easily configure different network scenarios, including urban, suburban, and rural environments.
-- **Performance Metrics:** Gain insights with a range of metrics like throughput, latency, and packet loss.
+- **Performance Metrics via InfluxDB:** Gain insights with a range of metrics like throughput, latency, and packet loss.
 
 ## Getting Started
 
