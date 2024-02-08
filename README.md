@@ -1,4 +1,4 @@
-# RAN Fusion: A NextG RAN Simulator
+# RAN Fusion: Simple RAN Simulator
 
 ## Overview
 
